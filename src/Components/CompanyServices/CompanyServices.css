@@ -13,13 +13,13 @@
   .company-overview {
     max-width: 800px;
     margin: 0 auto;
-    text-align: right; /* يمكنك تعديل هذا حسب اللغة المستخدمة */
+    text-align: right;
   }
   
   .company-overview h3 {
     text-align: center;
     font-size: 1.8em;
-    color: #007bff;
+    color: #0077ff;
     margin-bottom: 15px;
   }
   
