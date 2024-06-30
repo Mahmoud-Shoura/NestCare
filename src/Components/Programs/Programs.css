@@ -1,0 +1,42 @@
+/* Programs.css */
+.programs-container {
+    text-align: center;
+    padding: 20px;
+    background-color: #f7f7f7;
+  }
+  
+  .title h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+  
+  .title p {
+    color: #555;
+    font-size: 1.2em;
+  }
+  
+  .programs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .card {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 250px;
+    text-align: right; /* لضبط النصوص لليمين */
+  }
+  
+  .card h3 {
+    margin-bottom: 10px;
+  }
+  
+  .card p {
+    color: #666;
+  }
