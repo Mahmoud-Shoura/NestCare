@@ -3,8 +3,8 @@ import Hero from "./Components/Hero/Hero";
 import Title from "./Components/Title/Title";
 import Programs from "./Components/Programs/Programs";
 import CompanyServices from "./Components/CompanyServices/CompanyServices";
-import GetSupport from "./Components/GetSupport/GetSupport";
-import Footer from "./Components/Footer/Footer";
+import Contact from "./Contact/Contact";
+import { Footer } from "./Footer/Footer";
 
 const App = () => {
   return (
@@ -15,7 +15,7 @@ const App = () => {
       <Programs />
       <CompanyServices />
       <Title subTitle="لطلب الخدمة و التواصل" title="يُسعدنا الرد علي رسائلك" />
-      <GetSupport />
+      <Contact />
       <Footer />
     </div>
   );
