@@ -5,6 +5,7 @@ import logo from "../../assets/logo1.png";
 
 const Navbar = () => {
   const [stiky, setStiky] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,6 +17,10 @@ const Navbar = () => {
     };
   }, []);
 
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
     <nav className={`navbar ${stiky ? "dark-nav" : ""}`}>
       <div className="navbar-container">
@@ -23,14 +28,28 @@ const Navbar = () => {
         <a href="#" className="brand">
           NestCare | بيت الرعاية
         </a>
-        <ul className="nav-links">
+        <div
+          className={`hamburger ${menuOpen ? "open" : ""}`}
+          onClick={toggleMenu}
+        >
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <ul className={`nav-links ${menuOpen ? "active" : ""}`}>
           <li>
-            <Link to="hero" smooth={true} duration={500}>
+            <Link to="hero" smooth={true} duration={500} onClick={toggleMenu}>
               الصفحة الرئيسية
             </Link>
           </li>
           <li>
-            <Link to="programs" smooth={true} offset={-200} duration={500}>
+            <Link
+              to="programs"
+              smooth={true}
+              offset={-200}
+              duration={500}
+              onClick={toggleMenu}
+            >
               خَدماتُنا
             </Link>
           </li>
@@ -40,6 +59,7 @@ const Navbar = () => {
               smooth={true}
               offset={-50}
               duration={500}
+              onClick={toggleMenu}
             >
               من نحن
             </Link>
@@ -50,6 +70,7 @@ const Navbar = () => {
               smooth={true}
               offset={-200}
               duration={500}
+              onClick={toggleMenu}
               className="btn"
             >
               للطلب و التواصل
