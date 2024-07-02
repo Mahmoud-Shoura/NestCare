@@ -3,8 +3,9 @@ import Hero from "./Components/Hero/Hero";
 import Title from "./Components/Title/Title";
 import Programs from "./Components/Programs/Programs";
 import CompanyServices from "./Components/CompanyServices/CompanyServices";
-import Contact from "./Contact/Contact";
-import Footer from "./Footer/Footer";
+
+import Contact from "./Components/Contact/Contact";
+import Footer from "./Components/Footer/Footer";
 
 const App = () => {
   return (

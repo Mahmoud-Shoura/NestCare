@@ -87,6 +87,10 @@
       flex-direction: column;
     }
   
+    .logo {
+      margin-bottom: 15px;
+    }
+
     .navbar-container .menu-toggle {
       display: block;
       cursor: pointer;

@@ -1,15 +1,8 @@
-import { animateScroll as scroll } from "react-scroll";
 import "./Hero.css";
 import dark_arrow from "../../assets/dark-arrow.png";
+import { Link } from "react-scroll";
 
 const Hero = () => {
-  const handleButtonClick = () => {
-    scroll.scrollTo("contact", {
-      duration: 500,
-      smooth: true,
-    });
-  };
-
   return (
     <div className="hero container">
       <div className="hero-text">
@@ -22,9 +15,15 @@ const Hero = () => {
           نحن هنا لنقدم لكم أفضل الخدمات بجودة عالية وموثوقه. راحتكم هي
           أولويتنا، دعونا نهتم بكم وبمنزلكم
         </p>
-        <button className="btn" onClick={handleButtonClick}>
+        <Link
+          to="contact"
+          smooth={true}
+          offset={-150}
+          duration={500}
+          className="btn"
+        >
           للطلب و التواصل <img src={dark_arrow} alt="arrow icon" />
-        </button>
+        </Link>
       </div>
     </div>
   );

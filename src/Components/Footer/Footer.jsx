@@ -1,16 +1,14 @@
+// src/Components/Footer/Footer.jsx
+
 import "./Footer.css";
 
-export const Footer = () => {
+const Footer = () => {
   return (
     <div className="footer">
       <p>
         © 2024 دار الرعاية. جميع الحقوق محفوظة
         <br />
-        <a
-          href="https://mhs.netlify.app/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a href="https://mhs.netlify.app/" target="blank">
           MHS
         </a>
       </p>
@@ -21,3 +19,5 @@ export const Footer = () => {
     </div>
   );
 };
+
+export default Footer; // هذا التصدير الافتراضي

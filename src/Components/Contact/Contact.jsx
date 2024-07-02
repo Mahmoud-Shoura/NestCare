@@ -1,17 +1,17 @@
-import React from "react";
+import { useState } from "react";
 import "./Contact.css";
-import msg_icon from "../assets/msg-icon.png";
-import phone_icon from "../assets/phone-icon.png";
+import msgIcon from "../../assets/msg-icon.png";
+import phoneIcon from "../../assets/phone-icon.png";
 
 const Contact = () => {
-  const [result, setResult] = React.useState("");
+  const [result, setResult] = useState("");
 
   const onSubmit = async (event) => {
     event.preventDefault();
     setResult("جار الارسال");
     const formData = new FormData(event.target);
 
-    formData.append("access_key", "YOUR_ACCESS_KEY_HERE");
+    formData.append("access_key", "216485f7-1d79-424f-884d-1d3ffe98bb78");
 
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
@@ -28,11 +28,12 @@ const Contact = () => {
       setResult(data.message);
     }
   };
+
   return (
     <div className="contact">
       <div className="contact-col">
         <h3>
-          لطلب الخدمة و التواصل <img src={msg_icon} alt="" />
+          لطلب الخدمة و التواصل <img src={msgIcon} alt="Message Icon" />
         </h3>
         <p>
           إذا كان لديكم أي استفسار أو تحتاجون إلى المزيد من المعلومات، لا
@@ -40,7 +41,7 @@ const Contact = () => {
         </p>
         <ul>
           <li>
-            <img src={phone_icon} alt="" /> +20 111 071 2377
+            <img src={phoneIcon} alt="Phone Icon" /> +20 111 071 2377
           </li>
         </ul>
       </div>
