@@ -4,13 +4,19 @@ export const Footer = () => {
   return (
     <div className="footer">
       <p>
-        © 2024 Edusity. All rights reserved.
+        © 2024 دار الرعاية. جميع الحقوق محفوظة
         <br />
-        Mahmoud Hamed Shoura
+        <a
+          href="https://mhs.netlify.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          MHS
+        </a>
       </p>
       <ul>
-        <li>Terms of services</li>
-        <li>Privacy Policy</li>
+        <li>شروط الخدمة</li>
+        <li>سياسة الخصوصية</li>
       </ul>
     </div>
   );
