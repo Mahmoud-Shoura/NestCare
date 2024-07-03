@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-scroll";
 import "./Navbar.css";
 import logo from "../../assets/logo1.png";
 
@@ -25,7 +24,7 @@ const Navbar = () => {
     <nav className={`navbar ${stiky ? "dark-nav" : ""}`}>
       <div className="navbar-container">
         <img src={logo} alt="NestCare Logo" className="logo" />
-        <a href="#" className="brand">
+        <a href="#hero" className="brand">
           NestCare | بيت الرعاية
         </a>
         <div
@@ -38,43 +37,24 @@ const Navbar = () => {
         </div>
         <ul className={`nav-links ${menuOpen ? "active" : ""}`}>
           <li>
-            <Link to="hero" smooth={true} duration={500} onClick={toggleMenu}>
+            <a href="#hero" onClick={toggleMenu}>
               الصفحة الرئيسية
-            </Link>
+            </a>
           </li>
           <li>
-            <Link
-              to="programs"
-              smooth={true}
-              offset={-200}
-              duration={500}
-              onClick={toggleMenu}
-            >
+            <a href="#programs" onClick={toggleMenu}>
               خَدماتُنا
-            </Link>
+            </a>
           </li>
           <li>
-            <Link
-              to="company-services"
-              smooth={true}
-              offset={-50}
-              duration={500}
-              onClick={toggleMenu}
-            >
+            <a href="#company-services" onClick={toggleMenu}>
               من نحن
-            </Link>
+            </a>
           </li>
           <li>
-            <Link
-              to="contact"
-              smooth={true}
-              offset={-200}
-              duration={500}
-              onClick={toggleMenu}
-              className="btn"
-            >
+            <a href="#contact" onClick={toggleMenu} className="btn">
               للطلب و التواصل
-            </Link>
+            </a>
           </li>
         </ul>
       </div>

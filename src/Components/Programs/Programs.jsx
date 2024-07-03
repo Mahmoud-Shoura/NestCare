@@ -42,7 +42,7 @@ const Programs = () => {
   ];
 
   return (
-    <div className="programs">
+    <div className="programs" id="programs">
       {programDetails.map((program, index) => (
         <div
           className="card"
