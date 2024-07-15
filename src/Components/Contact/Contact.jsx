@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./Contact.css";
 import msgIcon from "../../assets/msg-icon.png";
-import phoneIcon from "../../assets/phone-icon.png";
+import { BsWhatsapp } from "react-icons/bs";
 
 const Contact = () => {
   const [result, setResult] = useState("");
@@ -39,9 +39,15 @@ const Contact = () => {
           إذا كان لديكم أي استفسار أو تحتاجون إلى المزيد من المعلومات، لا
           تترددوا في التواصل معنا.
         </p>
-        <ul>
-          <li>
-            <img src={phoneIcon} alt="Phone Icon" /> +20 111 071 2377
+        <ul className="contact-option">
+          <li className="contact-option-icon">
+            <a
+              href="https://api.whatsapp.com/send/?phone=%2B201091536811&text&type=phone_number&app_absent=0"
+              target="__blank"
+            >
+              <BsWhatsapp className="icon-whatsapp" />
+              Send a message
+            </a>
           </li>
         </ul>
       </div>
